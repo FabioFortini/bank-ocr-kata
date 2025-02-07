@@ -9,10 +9,6 @@ export class Entry {
         return new Entry(input);
     }
 
-    toString() {
-        return this.lines.join('\n')
-    }
-
     equals(other: Entry): boolean {
         if (this.lines.length !== other.lines.length) {
             return false;

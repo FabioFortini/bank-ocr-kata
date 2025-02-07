@@ -3,9 +3,9 @@ import { OCRInput } from "../src/ocr-input";
 import { Entry } from "../src/entry";
 
 describe('OCR input', () => {
-    it('extracts a list of entries', () => {
+  it('extracts a list of entries', () => {
 
-        const input = `
+    const input = `
     _  _     _  _  _  _  _ 
   | _| _||_||_ |_   ||_||_|
   ||_  _|  | _||_|  ||_| _|
@@ -16,8 +16,8 @@ describe('OCR input', () => {
                            
 `
 
-        const ocrInput = new OCRInput(input)
-        const expectedEntries = [Entry.of(`
+    const ocrInput = new OCRInput(input)
+    const expectedEntries = [Entry.of(`
     _  _     _  _  _  _  _ 
   | _| _||_||_ |_   ||_||_|
   ||_  _|  | _||_|  ||_| _|
@@ -28,7 +28,6 @@ describe('OCR input', () => {
   ||_  _|  | _||_|  ||_| _|
                            
 `)]
-        console.log("entries: " + ocrInput.extractEntries())
-        expect(ocrInput.extractEntries()).toStrictEqual(expectedEntries)
-    })
+    expect(ocrInput.extractEntries()).toStrictEqual(expectedEntries)
+  })
 });
