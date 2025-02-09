@@ -1,4 +1,5 @@
 export class Entry {
+
     private lines: string[] = [];
 
     constructor(singleLineInput: string) {
@@ -7,6 +8,10 @@ export class Entry {
 
     static of(input: string) {
         return new Entry(input);
+    }
+
+    toAccountNumber(): any {
+      throw new Error("Method not implemented.");
     }
 
     equals(other: Entry): boolean {
