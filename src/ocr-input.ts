@@ -8,6 +8,7 @@ export class OCRInput {
     }
 
     extractEntries(): Entry[] {
+        // TODO use JS standard library (map etc.) for the following code
         const entries: Entry[] = [];
 
         let offset = 0

@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { OCRNumber } from "../src/ocr-number"
 
 describe("OCRNumber", () => {
+  // TODO write a parameriterized test for this test suite
+
   it("returns a number from OCR representation of value 1", () => {
     const ocrRepresentation = [
       "   ",

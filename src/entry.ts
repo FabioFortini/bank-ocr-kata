@@ -13,6 +13,7 @@ export class Entry {
     }
 
     toAccountNumber(): any {
+        // TODO refactor
         const numberOne: string[] = []
         const numberTwo: string[] = []
         const numberThree: string[] = []
