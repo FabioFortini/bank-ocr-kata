@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { Entry } from "../src/entry";
 
 describe('Entry', () => {
-  it.skip('returns an account number', () => {
+  it('returns an account number', () => {
     const entryContent = 
 "    _  _     _  _  _  _  _ \n" +
 "  | _| _||_||_ |_   ||_||_|\n" +
