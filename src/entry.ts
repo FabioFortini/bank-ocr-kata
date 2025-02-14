@@ -4,11 +4,11 @@ export class Entry {
 
     private lines: string[] = [];
 
-    constructor(singleLineInput: string) {
-        this.lines = singleLineInput.split('\n')
+    constructor(lines: string[]) {
+        this.lines = lines
     }
 
-    static of(input: string) {
+    static of(input: string[]) {
         return new Entry(input);
     }
 
@@ -46,7 +46,9 @@ export class Entry {
       const eight = OCRNumber.from(numberEight)
       const ninth = OCRNumber.from(numberNine)
 
-      return `${first.toNumber()}${second.toNumber()}${third.toNumber()}${fourth.toNumber()}${fifth.toNumber()}${sixth.toNumber()}${seventh.toNumber()}${eight.toNumber()}${ninth.toNumber()}`
+      const accountNumber = `${first.toNumber()}${second.toNumber()}${third.toNumber()}${fourth.toNumber()}${fifth.toNumber()}${sixth.toNumber()}${seventh.toNumber()}${eight.toNumber()}${ninth.toNumber()}`;
+      console.log(`account number is [${accountNumber}]`)
+      return accountNumber
     }
 
     equals(other: Entry): boolean {
