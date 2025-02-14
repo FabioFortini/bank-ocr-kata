@@ -47,7 +47,6 @@ export class Entry {
       const ninth = OCRNumber.from(numberNine)
 
       const accountNumber = `${first.toNumber()}${second.toNumber()}${third.toNumber()}${fourth.toNumber()}${fifth.toNumber()}${sixth.toNumber()}${seventh.toNumber()}${eight.toNumber()}${ninth.toNumber()}`;
-      console.log(`account number is [${accountNumber}]`)
       return accountNumber
     }
 
