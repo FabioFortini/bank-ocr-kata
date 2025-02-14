@@ -8,19 +8,20 @@ export class OCRInput {
     }
 
     extractEntries(): Entry[] {
-        // TODO use JS standard library (map etc.) for the following code
         const entries: Entry[] = [];
 
-        let offset = 0
+        const inputLines = this.convertToLinesArray()
 
-        do {
-            const increment = (4 * 28) + 1
-            const entryContent = this.input.substring(0, increment)
+        const chunkSize = 4
+        for(let i = 0; i < inputLines.length; i += chunkSize) {
+            const entryContent = inputLines.slice(i, i + chunkSize)
             entries.push(Entry.of(entryContent))
-
-            offset += increment
-        } while (offset < (this.input.length - 1))
+        }    
 
         return entries;
     }
+
+  private convertToLinesArray() {
+    return this.input.split("\n").filter(x => x !== "");
+  }
 }
