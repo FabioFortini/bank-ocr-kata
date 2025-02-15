@@ -10,7 +10,7 @@ describe('Entry', () => {
       "                           "
     ]
     const entry = Entry.of(entryContent)
-    
+
     expect(entry.toAccountNumber()).to.equal("123456789")
   })
 })

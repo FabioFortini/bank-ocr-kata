@@ -1,10 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { OCRInput } from "../src/ocr-input";
 import { Entry } from "../src/entry";
+import { OCRInput } from "../src/ocr-input";
 
 describe('OCR input', () => {
   it('extracts a list of entries', () => {
-
     const input =
       "    _  _     _  _  _  _  _ \n" +
       "  | _| _||_||_ |_   ||_||_|\n" +
@@ -13,7 +12,7 @@ describe('OCR input', () => {
       "    _  _     _  _  _  _  _ \n" +
       "  | _| _||_||_ |_   || ||_|\n" +
       "  ||_  _|  | _||_|  ||_| _|\n" +
-      "                           \n" 
+      "                           \n"
 
     const ocrInput = new OCRInput(input)
     const expectedEntries = [Entry.of([

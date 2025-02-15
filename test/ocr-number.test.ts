@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { OCRNumber } from "../src/ocr-number"
+import { OCRNumber } from "../src/ocr-number";
 
 describe("OCRNumber", () => {
   // TODO write a parameriterized test for this test suite
@@ -10,7 +10,7 @@ describe("OCRNumber", () => {
       "  |",
       "  |"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(1)
@@ -22,7 +22,7 @@ describe("OCRNumber", () => {
       " _|",
       "|_ "
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(2)
@@ -34,7 +34,7 @@ describe("OCRNumber", () => {
       " _|",
       " _|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(3)
@@ -46,7 +46,7 @@ describe("OCRNumber", () => {
       "|_|",
       "  |"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(4)
@@ -58,7 +58,7 @@ describe("OCRNumber", () => {
       "|_ ",
       " _|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(5)
@@ -70,7 +70,7 @@ describe("OCRNumber", () => {
       "|_ ",
       "|_|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(6)
@@ -82,7 +82,7 @@ describe("OCRNumber", () => {
       "  |",
       "  |"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(7)
@@ -94,7 +94,7 @@ describe("OCRNumber", () => {
       "|_|",
       "|_|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(8)
@@ -106,7 +106,7 @@ describe("OCRNumber", () => {
       "|_|",
       " _|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(9)
@@ -118,7 +118,7 @@ describe("OCRNumber", () => {
       "| |",
       "|_|"
     ]
-    
+
     const ocrNumber = OCRNumber.from(ocrRepresentation)
 
     expect(ocrNumber.toNumber()).to.equal(0)
